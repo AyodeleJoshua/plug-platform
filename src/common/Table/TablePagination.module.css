@@ -1,0 +1,25 @@
+.tablePaginationContainer {
+    width: 50%;
+    margin: 28px auto;
+    display: flex;
+    align-items: center;
+}
+.tablePaginationNumber {
+    margin-right: 20px;
+}
+.paginationButton {
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+.paginationButton:hover {
+  background: #919EAB;
+  color: #fff;
+}
+.activeButton {
+  border: 1px solid #0546e0;
+}

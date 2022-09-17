@@ -2,8 +2,49 @@
   width: 100%;
   background: #ffffff;
   box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
+  overflow-x: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .tableTitle {
-    
+  height: 79px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 27px;
+}
+
+.headRow {
+  height: 50px;
+  padding: 10px 27px;
+  background: #e5e5e5;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+.bodyRow {
+  height: 50px;
+  padding: 10px 27px;
+  cursor: pointer;
+}
+.bodyRow:hover {
+  background: #f5f5f5;
+}
+.bodyRowEven {
+  background: #f5f5f5;
+}
+.tableData {
+  text-align: center;
+}
+.tableBodyData {
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  color: #848383;
 }

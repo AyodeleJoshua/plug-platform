@@ -10,6 +10,7 @@ const Home = () => {
     <PageLayout>
       <div className={styles.homepage}>
         <Table
+          title="All Elephants"
           header={tableHeader}
           data={tableData}
           setTableData={setTableData}
