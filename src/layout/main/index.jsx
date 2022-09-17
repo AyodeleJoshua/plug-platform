@@ -6,7 +6,7 @@ const Main = ({ subRoute, children }) => {
   return (
     <main className={styles.mainContainer}>
       <TitleBlock subRoute={subRoute} />
-      {children}
+      <div className={styles.childrenContainer}>{children}</div>
     </main>
   );
 };
