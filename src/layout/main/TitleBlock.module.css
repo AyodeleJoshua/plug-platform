@@ -20,6 +20,11 @@
   margin-left: 14px;
 }
 
+.crumbItemToHome {
+  color: #000;
+  text-decoration: none;
+}
+
 .greaterThanIcon {
   margin-right: 14px;
 }

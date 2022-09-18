@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import styles from "./TitleBlock.module.css";
 const TitleBlock = ({ subRoute, setShowSideBar }) => {
   return (
     <div className={styles.titleBlockContainer}>
       <div className={styles.crumbs}>
-        <p>Acumen Digital Interview Task / Elephantom</p>
+        <Link to="/" className={styles.crumbItemToHome}>Acumen Digital Interview Task / Elephantom</Link>
         {subRoute && (
           <div className={styles.subrouteCrumbs}>
             <img
