@@ -1,6 +1,7 @@
 .sidebarContainer {
     width: 25%;
     background: #ddddff;
+    z-index: 4;
     transition: 0.5s all;
 }
 

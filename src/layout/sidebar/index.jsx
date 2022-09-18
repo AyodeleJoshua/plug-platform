@@ -11,7 +11,7 @@ const Sidebar = ({ showSideBar }) => {
         />
       </div>
       <nav>
-        <Navbar name="Home" />
+        <Navbar name="Home" active={true} />
         <Navbar name="Elephant" />
       </nav>
     </aside>
