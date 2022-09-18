@@ -21,6 +21,7 @@
   display: inline-block;
   margin-left: 13px;
 }
+
 .description {
   margin-top: 20px;
   font-weight: 400;
@@ -28,4 +29,8 @@
   line-height: 45px;
 
   color: #30425a;
+}
+
+.elephantImage {
+  max-width: 100%;
 }
