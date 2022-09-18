@@ -1,8 +1,13 @@
 .sidebarContainer {
     width: 25%;
-    /* height: 100%; */
     background: #ddddff;
+    transition: 0.5s all;
 }
+
+.hideSidebar {
+    margin-left: -1000px;
+}
+
 .logoContainer {
     background: #fff;
     border-radius: 50%;
@@ -12,4 +17,19 @@
     justify-content: center;
     align-items: center;
     margin: 60px auto;
+}
+
+@media screen and (max-width: 991px) {
+    .sidebarContainer {
+        width: 80%;
+        height: 890px;
+        position: absolute;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sidebarContainer {
+        width: 50%;
+    }
+
 }

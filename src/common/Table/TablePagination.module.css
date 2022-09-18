@@ -1,11 +1,11 @@
 .tablePaginationContainer {
-    width: 50%;
-    margin: 28px auto;
-    display: flex;
-    align-items: center;
+  width: 50%;
+  margin: 28px auto;
+  display: flex;
+  align-items: center;
 }
 .tablePaginationNumber {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .paginationButton {
   cursor: pointer;
@@ -17,9 +17,24 @@
   margin-right: 8px;
 }
 .paginationButton:hover {
-  background: #919EAB;
+  background: #919eab;
   color: #fff;
 }
 .activeButton {
   border: 1px solid #0546e0;
+}
+
+@media screen and (max-width: 991px) {
+  .tablePaginationContainer {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1119px) {
+    .tablePaginationContainer {
+        width: 100%;
+        justify-content: center;
+  }
 }

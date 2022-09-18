@@ -1,9 +1,9 @@
 import Navbar from "./Navbar";
 import styles from "./Sidebar.module.css";
 
-const Sidebar = () => {
+const Sidebar = ({ showSideBar }) => {
   return (
-    <aside className={styles.sidebarContainer}>
+    <aside className={`${styles.sidebarContainer} ${!showSideBar ? `${styles.hideSidebar}` : ""}`}>
       <div className={styles.logoContainer}>
         <img
           src={require("../../assets/icons/elephant-logo.svg").default}

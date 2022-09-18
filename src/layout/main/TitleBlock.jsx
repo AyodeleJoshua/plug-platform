@@ -1,5 +1,5 @@
 import styles from "./TitleBlock.module.css";
-const TitleBlock = ({ subRoute }) => {
+const TitleBlock = ({ subRoute, setShowSideBar }) => {
   return (
     <div className={styles.titleBlockContainer}>
       <div className={styles.crumbs}>
@@ -15,6 +15,14 @@ const TitleBlock = ({ subRoute }) => {
           </div>
         )}
       </div>
+      <button
+        className={styles.burger}
+        onClick={() => setShowSideBar((showSideBar) => !showSideBar)}
+      >
+        <span className={styles.burgerLine}></span>
+        <span className={styles.burgerLine}></span>
+        <span className={styles.burgerLine}></span>
+      </button>
     </div>
   );
 };

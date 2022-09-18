@@ -6,3 +6,9 @@
 .childrenContainer {
   padding: 0 3%;
 }
+
+@media screen and (max-width: 1024px) {
+  .mainContainer {
+    width: 100%;
+  }
+}
