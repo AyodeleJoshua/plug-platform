@@ -22,7 +22,7 @@
 
 @media screen and (max-width: 991px) {
     .sidebarContainer {
-        width: 80%;
+        width: 100%;
         height: 890px;
         position: absolute;
     }
