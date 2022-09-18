@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Layout.module.css";
 import Sidebar from "./sidebar";
 import Main from "./main";
-import useWindowSize  from "../utils/customHooks/useWindowSize";
+import useWindowSize from "../utils/customHooks/useWindowSize";
 const PageLayout = ({ subRoute, children }) => {
   const [showSideBar, setShowSideBar] = useState(true);
   const [width, height] = useWindowSize();
@@ -10,6 +10,8 @@ const PageLayout = ({ subRoute, children }) => {
   useEffect(() => {
     if (width > 768) {
       setShowSideBar(true);
+    } else {
+      setShowSideBar(false);
     }
   }, [width, height]);
   return (
