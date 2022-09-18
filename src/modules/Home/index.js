@@ -5,7 +5,7 @@ import { useQuery } from "react-query";
 import getData from "../../services/api/getData";
 const Home = () => {
   const tableHeader = ["S/N", "Name", "Species", "Sex", "Afiliation", "Dob"];
-  const { isLoading, error, data } = useQuery("elephantData", () =>
+  const { isLoading, data } = useQuery("elephantData", () =>
     getData('/elephants/asian').then(res => res.json())
   );
 
