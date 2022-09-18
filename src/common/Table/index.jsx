@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, startTransition } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { useNavigate } from "react-router-dom";
 import styles from "./Table.module.css";
 import TablePagination from "./TablePagination";
 
 const Table = ({ title, header, data, isLoadingData }) => {
   const [currPage, setCurPage] = useState(1);
+  const navigate = useNavigate();
   const loadingStateSkeletonRow = new Array(10).fill(null);
   return (
     <div className={styles.tableContainer}>
@@ -24,9 +26,9 @@ const Table = ({ title, header, data, isLoadingData }) => {
           {isLoadingData ? (
             <tbody>
               {loadingStateSkeletonRow.map((item, index) => (
-                <tr className={`${styles.bodyRow} `}>
-                  {header.map(() => (
-                    <td className={styles.tableData}>
+                <tr className={`${styles.bodyRow} `} key={index}>
+                  {header.map((item, index) => (
+                    <td className={styles.tableData} key={index}>
                       <Skeleton height="20px" width="70%" />
                     </td>
                   ))}
@@ -43,6 +45,12 @@ const Table = ({ title, header, data, isLoadingData }) => {
                     className={`${styles.bodyRow} ${
                       (index + 1) % 2 === 0 ? `${styles.bodyRowEven}` : ""
                     }`}
+                    onClick={() => {
+                      startTransition(() => {
+                        navigate(`/elephant/${item["_id"]}`);
+                      });
+                      // set active nav to elephant
+                    }}
                   >
                     <td
                       className={`${styles.tableData} ${styles.tableBodyData}`}

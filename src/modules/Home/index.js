@@ -5,9 +5,19 @@ import { useQuery } from "react-query";
 import getData from "../../services/api/getData";
 const Home = () => {
   const tableHeader = ["S/N", "Name", "Species", "Sex", "Afiliation", "Dob"];
-  const { isLoading, data } = useQuery("elephantData", () =>
-    getData('/elephants/asian').then(res => res.json())
+  const { isLoading, error, data } = useQuery("elephantData", () =>
+    getData("/elephants/asian").then((res) => res.json())
   );
+
+  if (error || data?.error) {
+    return (
+      <PageLayout>
+        <div className={styles.homepage}>
+          <h1>Oops! Something went wrong</h1>
+        </div>
+      </PageLayout>
+    );
+  }
 
   return (
     <PageLayout>

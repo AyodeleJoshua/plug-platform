@@ -1,0 +1,31 @@
+.elephantDetailsContainer {
+  margin-top: 27px;
+}
+
+.elephantDetails {
+  margin-top: 24px;
+}
+
+.elephantName {
+  font-weight: 700;
+  font-size: 48px;
+  color: #30425a;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(196, 205, 213, 0.62);
+}
+
+.gender {
+  font-weight: 400;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 13px;
+}
+.description {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 45px;
+
+  color: #30425a;
+}
