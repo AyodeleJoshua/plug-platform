@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
-import "./app.css";
+import "./App.css";
 const Home = lazy(() => import("./pages"));
 const Elephant = lazy(() => import("./pages/Elephant"));
 
