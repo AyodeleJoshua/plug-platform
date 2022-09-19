@@ -11,7 +11,7 @@ const Home = () => {
 
   if (error || data?.error) {
     return (
-      <PageLayout>
+      <PageLayout activeNav="Home">
         <div className={styles.homepage}>
           <h1>Oops! Something went wrong</h1>
         </div>
@@ -20,7 +20,7 @@ const Home = () => {
   }
 
   return (
-    <PageLayout>
+    <PageLayout activeNav="Home">
       <div className={styles.homepage}>
         <Table
           isLoadingData={isLoading}

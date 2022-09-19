@@ -3,9 +3,9 @@ import styles from "./Layout.module.css";
 import Sidebar from "./sidebar";
 import Main from "./main";
 import useWindowSize from "../utils/customHooks/useWindowSize";
-const PageLayout = ({ subRoute, children }) => {
+const PageLayout = ({ subRoute, children, activeNav }) => {
   const [showSideBar, setShowSideBar] = useState(true);
-  const [activeNav, setActiveNav] = useState("Home");
+  // const [activeNav, setActiveNav] = useState("Home");
   const [width, height] = useWindowSize();
 
   useEffect(() => {
@@ -21,9 +21,13 @@ const PageLayout = ({ subRoute, children }) => {
         showSideBar={showSideBar}
         setShowSideBar={setShowSideBar}
         activeNav={activeNav}
-        setActiveNav={setActiveNav}
+        // setActiveNav={setActiveNav}
       />
-      <Main subRoute={subRoute} setShowSideBar={setShowSideBar} setActiveNav={setActiveNav}>
+      <Main
+        subRoute={subRoute}
+        setShowSideBar={setShowSideBar}
+        // setActiveNav={setActiveNav}
+      >
         {children}
       </Main>
     </div>

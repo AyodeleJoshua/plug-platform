@@ -15,7 +15,7 @@ const ElephantomDetails = ({ id }) => {
   const elephantDetailsResponse = elephantData?.data;
   if (errorLoadingElephantData || elephantData?.error) {
     return (
-      <PageLayout subRoute={true}>
+      <PageLayout activeNav="Elephant" subRoute={true}>
         <div className={styles.elephantDetailsContainer}>
           <h1>Oops! Something went wrong</h1>
         </div>
@@ -24,7 +24,7 @@ const ElephantomDetails = ({ id }) => {
   }
 
   return (
-    <PageLayout subRoute={true}>
+    <PageLayout activeNav="Elephant" subRoute={true}>
       <div className={styles.elephantDetailsContainer}>
         {isLoadingElephantData  ? (
           <ElephantomDetailsLoadingSkeleton />
