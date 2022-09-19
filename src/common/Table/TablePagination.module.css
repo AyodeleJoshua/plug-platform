@@ -29,12 +29,12 @@
     width: 100%;
     justify-content: center;
     flex-direction: column;
-}
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1119px) {
-    .tablePaginationContainer {
-        width: 100%;
-        justify-content: center;
+  .tablePaginationContainer {
+    width: 100%;
+    justify-content: center;
   }
 }

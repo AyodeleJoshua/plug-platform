@@ -43,6 +43,7 @@
 }
 .tableData {
   text-align: center;
+  min-width: 50px;
 }
 .tableBodyData {
   color: #000000;
